@@ -156,26 +156,24 @@ cv::Point3f interpolation(cv::Point3f pt1, cv::Point3f pt2,
 void write_to_ply(std::vector<Triangle> triangles, const char* path)
 {
 
-        std::map<Point, int> vertexMap;
-    std::vector<std::vector<int>> triangles;
+    //     std::map<Point, int> vertexMap;
+    // std::vector<std::vector<int>> triangles;
+    // VertexContainer container;
 
+    // int cnt = 0;
+    // std::vector<int> indices;
+    // for (auto &vertex: triangles)
+    // {
+    //     if (vertex.vertices.count(vertex) == 0)
+    //     {
+    //         container.vertexMap[vertex] = cnt;
+    //         cnt++;
+    //     }
+    //     indices.push_back(container.vertexMap[vertex]);
+    // }
+    
+    // vertices
 
-    VertexContainer container;
-    int cnt = 0;
-    for (auto &triangle: triangles)
-    {
-        std::vector<int> indices;
-        for (auto &vertex: triangle)
-        {
-            if (container.vertexMap.count(vertex) == 0)
-            {
-                container.vertexMap[vertex] = cnt;
-                cnt++;
-            }
-            indices.push_back(container.vertexMap[vertex]);
-        }
-        container.triangles.push_back(indices);
-    }
 
     std::ofstream outputFile;
     outputFile.open(path);

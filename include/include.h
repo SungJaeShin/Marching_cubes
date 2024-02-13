@@ -28,15 +28,15 @@ struct PointCloud
     std::vector<float> density;
 };
 
-struct Triangle
-{
-    std::vector<cv::Point3f> vertices;
-};
-
 struct Voxel
 {
     std::vector<cv::Point3f> vertices;
     std::vector<float> density;
+};
+
+struct Triangle
+{
+    std::vector<cv::Point3f> vertices;
 };
 
 #endif

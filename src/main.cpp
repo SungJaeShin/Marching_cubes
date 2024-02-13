@@ -78,10 +78,9 @@ int main(int argc, char* argv[])
 
     // ===============================================================
     // Write PLY file using Triangles
-    std::cout << "triangle size: " << triangles.size() << std::endl;
+    std::cout << "Number of triangles: " << triangles.size() << std::endl;
     cv::String save_path = argv[2];
     write_to_ply(triangles, save_path.c_str());
-
     // ===============================================================
 
     // ===============================================================

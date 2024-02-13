@@ -36,7 +36,7 @@ Clone the repository and build and run simultaneously:
    $ sh start.sh
 ```
 
-In start.sh file, there must write the file (PLY or TXT) location and output file (PLY or TXT) location !!
+In `start.sh` file, **there must write the file (PLY or TXT) location and output file (PLY or TXT) location** !!
 ```
 g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lopencv_core -lopencv_features2d -o ./marching
 ./marching "FILE_LOCATION" "SAVE_LOCATION"

@@ -14,7 +14,7 @@ Follow [OpenCV](https://docs.opencv.org/4.x/d2/de6/tutorial_py_setup_in_ubuntu.h
 ## 2. Changing Parameters
 ### Parameters in "parameters.h"
 ```
-// random grid (READ_FILE = 0) or read from ply file (READ_FILE = 1)?
+// random grid (READ_FILE = 0) or read from file (READ_FILE = 1)
 #define READ_FILE 1 
 
 // Maximum Grid Size
@@ -34,6 +34,12 @@ Clone the repository and build and run simultaneously:
    $ git clone https://github.com/SungJaeShin/Marching_cubes.git
    $ cd Marching_cubes
    $ sh start.sh
+```
+
+In start.sh file, there must write the file (PLY or TXT) location and output file (PLY or TXT) location !!
+```
+g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lopencv_core -lopencv_features2d -o ./marching
+./marching "FILE_LOCATION" "SAVE_LOCATION"
 ```
 
 ## 4. Setting Rules between Vertices and Edges !!

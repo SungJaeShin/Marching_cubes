@@ -3,6 +3,7 @@
 #include "../include/utility.h"
 #include "../include/marching_cubes.h"
 #include "../include/viz_mesh.h"
+#include "../include/save_ply.h"
 
 int main(int argc, char* argv[])
 {
@@ -18,6 +19,7 @@ int main(int argc, char* argv[])
         pointcloud = get_pointcloud_from_ply(ply_path);
     }
     pointcloud_with_density = add_random_density(pointcloud);
+    std::cout << "Number of pointcloud: " << pointcloud.size() << std::endl;
 
     auto end_gen_pointcloud = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> gen_pointcloud_duration = end_gen_pointcloud - start_gen_pointcloud;
@@ -80,7 +82,7 @@ int main(int argc, char* argv[])
     // Write PLY file using Triangles
     std::cout << "Number of triangles: " << triangles.size() << std::endl;
     cv::String save_path = argv[2];
-    write_to_ply(triangles, save_path.c_str());
+    write_to_ply(pointcloud, triangles, save_path.c_str());
     // ===============================================================
 
     // ===============================================================

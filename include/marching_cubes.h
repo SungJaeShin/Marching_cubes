@@ -9,14 +9,14 @@ void init_voxel_vertices(PointCloud pointcloud, Voxel &voxel,
                          float cur_x, float cur_y, float cur_z,
                          float diff_x, float diff_y, float diff_z)
 {
-    cv::Point3f v0(cur_x, cur_y, cur_z);
-    cv::Point3f v1(cur_x, cur_y + diff_y, cur_z);
-    cv::Point3f v2(cur_x + diff_x, cur_y + diff_y, cur_z);
-    cv::Point3f v3(cur_x + diff_x, cur_y, cur_z);
-    cv::Point3f v4(cur_x, cur_y, cur_z + diff_z);
-    cv::Point3f v5(cur_x, cur_y + diff_y, cur_z + diff_z);
-    cv::Point3f v6(cur_x + diff_x, cur_y + diff_y, cur_z + diff_z);
-    cv::Point3f v7(cur_x + diff_x, cur_y, cur_z + diff_z);
+    cv::Point3f v0(cur_x,          cur_y,          cur_z + diff_z);
+    cv::Point3f v1(cur_x + diff_x, cur_y,          cur_z + diff_z);
+    cv::Point3f v2(cur_x + diff_x, cur_y,          cur_z);
+    cv::Point3f v3(cur_x,          cur_y,          cur_z);
+    cv::Point3f v4(cur_x,          cur_y + diff_y, cur_z + diff_z);
+    cv::Point3f v5(cur_x + diff_x, cur_y + diff_y, cur_z + diff_z);
+    cv::Point3f v6(cur_x + diff_x, cur_y + diff_y, cur_z);
+    cv::Point3f v7(cur_x,          cur_y + diff_y, cur_z);
 
     voxel.vertices.push_back(v0);
     voxel.vertices.push_back(v1);

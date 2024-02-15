@@ -153,65 +153,77 @@ cv::Point3f interpolation(cv::Point3f pt1, cv::Point3f pt2,
 
 // ===============================================================
 // this code following as: https://github.com/nihaljn/marching-cubes/blob/main/src/generator.cpp
-void write_to_ply(std::vector<Triangle> triangles, const char* path)
-{
+// void write_to_ply(std::vector<cv::Point3f> pointcloud, std::vector<Triangle> triangles, const char* path)
+// {
 
-    //     std::map<Point, int> vertexMap;
-    // std::vector<std::vector<int>> triangles;
-    // VertexContainer container;
+//     //     std::map<Point, int> vertexMap;
+//     // std::vector<std::vector<int>> triangles;
+//     // VertexContainer container;
 
-    // int cnt = 0;
-    // std::vector<int> indices;
-    // for (auto &vertex: triangles)
-    // {
-    //     if (vertex.vertices.count(vertex) == 0)
-    //     {
-    //         container.vertexMap[vertex] = cnt;
-    //         cnt++;
-    //     }
-    //     indices.push_back(container.vertexMap[vertex]);
-    // }
+//     // for (auto &vertex: triangles)
+//     // {
+//     //     if (vertex.vertices.count(vertex) == 0)
+//     //     {
+//     //         container.vertexMap[vertex] = cnt;
+//     //         cnt++;
+//     //     }
+//     //     indices.push_back(container.vertexMap[vertex]);
+//     // }
     
-    // vertices
 
 
-    std::ofstream outputFile;
-    outputFile.open(path);
+//     int cnt = 0;
+//     for(int i = 0; i < triangles.size(); i++)
+//     {
+//         std::vector<int> indices;
 
-    outputFile << "ply\n";
-    outputFile << "format ascii 1.0\n";
-    outputFile << "element vertex " << container.vertexMap.size() << "\n";
-    outputFile << "property float32 x\n"; 
-    outputFile << "property float32 y\n";
-    outputFile << "property float32 z\n";
-    outputFile << "element face " << container.triangles.size() << "\n";
-    outputFile << "property list uint8 int32 vertex_indices\n";
-    outputFile << "end_header\n";
+//         Triangle cur_triangle = triangles[i];
+        
+//         for(int j = 0; j < cur_triangle.vertices.size(); j++)
+//         {
+//             cv::Point3f vertex = cur_triangle.vertices[j];
+//             auto it = std::count(cur_triangle.vertices.begin(), cur_triangle.vertices.end(), vertex);
+//         }
+//     }
 
-    std::vector<Point> vertices (container.vertexMap.size());
-    for (auto &vertex: container.vertexMap)
-        vertices[vertex.second] = vertex.first;
 
-    for (auto &vertex: vertices)
-        outputFile << vertex.x << " " << vertex.y << " " << vertex.z << "\n";
-    for (auto &triangle: container.triangles)
-    {
-        outputFile << 3 << " ";
-        for (int index: triangle)
-            outputFile << index << " ";
-        outputFile << "\n";
-    }
-}
+
+//     std::ofstream outputFile;
+//     outputFile.open(path);
+
+//     outputFile << "ply\n";
+//     outputFile << "format ascii 1.0\n";
+//     outputFile << "element vertex " << pointcloud.vertices.size() << "\n";
+//     outputFile << "property float32 x\n"; 
+//     outputFile << "property float32 y\n";
+//     outputFile << "property float32 z\n";
+//     outputFile << "element face " << triangles.vertices.size() << "\n";
+//     outputFile << "property list uint8 int32 vertex_indices\n";
+//     outputFile << "end_header\n";
+
+//     for(int i = 0; i < pointcloud.size(); i++)
+//         outputFile << pointcloud[i].x << " " << pointcloud[i].y << " " << pointcloud[i].z << "\n";    
+
+
+
+//     for (auto &triangle: container.triangles)
+//     {
+//         outputFile << 3 << " ";
+//         for (int index: triangle)
+//             outputFile << index << " ";
+//         outputFile << "\n";
+//     }
+// }
 
 void write_triangles_to_file(std::vector<Triangle> triangles, const char* path)
 {
     std::ofstream outputFile;
     outputFile.open(path);
-    for (int i = 0; i < triangles.vertices.size(); i++)
+    for (int i = 0; i < triangles.size(); i++)
     {
         outputFile << i << ":\n";
         for (int j = 0; j < 3; j++)
-            outputFile << triangles.vertices[i][j].x << ",\t" << triangles.vertices[i][j].y << ",\t" << triangles.vertices[i][j].z << "\n";
+            outputFile << triangles[i].vertices[j].x << ",\t" << triangles[i].vertices[j].y << ",\t" << triangles[i].vertices[j].z << "\n";
         outputFile << "\n";
     }
 }

@@ -2,7 +2,7 @@
 from open3d import *    
 
 def main():
-    ply_path = "/home/sj/workspace/nerf_ws/src/marching_cubes/example/airplane.ply" 
+    ply_path = "/home/sj/workspace/nerf_ws/src/marching_cubes/example/output/marching_cubes_airplane_200.ply" 
     cloud = io.read_point_cloud(ply_path) # Read point cloud
     visualization.draw_geometries([cloud])    # Visualize point cloud      
 

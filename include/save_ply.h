@@ -3,7 +3,7 @@
 
 #include "include.h"
 // ===============================================================
-// this code following as: https://github.com/nihaljn/marching-cubes/blob/main/src/generator.cpp
+// this code following as: https://github.com/nihaljn/marching-cubes/blob/main/src/utilities.cpp
 struct Point
 {
     float x;

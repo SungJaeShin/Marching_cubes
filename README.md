@@ -71,9 +71,57 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
 ```
 
 ## 5. Results 
-
 - Time consumption
-- 
+   - Example PLY: `airplane.ply` (# of pointcloud: 445)
+   <table>
+      <tr>
+         <td> NUM VOXEL </td>
+         <td> 400 </td>
+         <td> 200 </td>
+         <td> 100 </td>
+         <td> 50 </td>
+         <td> 30 </td>
+         <td> 10 </td>
+      </tr> 
+      <tr>
+         <td> # of triangles </td>
+         <td> Killed </td>
+         <td> 19792328 </td>
+         <td> 2551595 </td>
+         <td> 328144 </td>
+         <td> 74192 </td>
+         <td> 3706 </td>
+      </tr>
+      <tr>
+         <td> Pointcloud Gen time (ms) </td>
+         <td> Killed </td>
+         <td> 2322.73 ms </td>
+         <td> 2213.96 ms </td>
+         <td> 2174.02 ms </td>
+         <td> 2208.76 ms </td>
+         <td> 2205.52 ms </td>
+      </tr>
+      <tr>
+         <td> Voxel calculation (ms) </td>
+         <td> Killed </td>
+         <td> 0.020379 ms </td>
+         <td> 0.065181 ms </td>
+         <td> 0.057287 ms </td>
+         <td> 0.019254 ms </td>
+         <td> 0.019293 ms </td>
+      </tr>
+      <tr>
+         <td> Marching Cubes (ms) </td>
+         <td> Killed </td>
+         <td> 337166 ms </td>
+         <td> 42207.1 ms </td>
+         <td> 4606.99 ms </td>
+         <td> 1029.29 ms </td>
+         <td> 53.8006 ms </td>
+      </tr>
+   </table>
+
+- Marching cube results
 
 
 ## 6. References

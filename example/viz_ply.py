@@ -14,7 +14,7 @@ if __name__ == "__main__":
 # from pyntcloud import PyntCloud
 # import matplotlib
 
-#ply_path = "/home/sj/workspace/rx_project_ws/src/neuralangelo/logs/kaist_b301/kaist_b301_name/kaist_b301.ply" 
+#ply_path = "/home/sj/workspace/nerf_ws/src/marching_cubes/example/output/marching_cubes_airplane_200.ply"
 #cloud = PyntCloud.from_file(ply_path)
 
 # cloud.plot(mesh=True, backend="matplotlib")

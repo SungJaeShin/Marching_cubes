@@ -27,7 +27,16 @@ Follow [OpenCV](https://docs.opencv.org/4.x/d2/de6/tutorial_py_setup_in_ubuntu.h
 #define ISOVALUE 0.5
 ```
 
-## 3. Build and Run 
+## 3. Descriptions
+(1) Loopup Table from [http://paulbourke.net/geometry/polygonise/](    http://paulbourke.net/geometry/polygonise/) \
+(2) save_ply.h from [https://github.com/nihaljn/marching-cubes/blob/main/src/utilities.cpp](https://github.com/nihaljn/marching-cubes/blob/main/src/utilities.cpp) \
+(3) Input file format &rarr; `.ply` & `.txt` \
+(4) Output file format &rarr; `.ply` & `.txt` \
+(5) Visualized pointcloud or mesh &rarr; `viz3DMesh()` & `viz3DPoints` in `viz_mesh.h` \
+(6) Visualization python code also provided in `example` folder &rarr; `viz_ply.py` \
+(7) Convert PLY format Binary to ASCII in `example` folder &rarr; `cvt_binary2ascii.py` 
+
+## 4. Build and Run 
 Clone the repository and build and run simultaneously:
 ```
    $ cd ${workspace}
@@ -39,10 +48,10 @@ Clone the repository and build and run simultaneously:
 In `start.sh` file, **there must write the file (PLY or TXT) location and output file (PLY or TXT) location** !!
 ```
 g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -lopencv_imgcodecs -lopencv_imgproc -lopencv_core -lopencv_features2d -o ./marching
-./marching "FILE_LOCATION" "SAVE_LOCATION"
+./marching <INPUT_FILE_LOCATION> <OUTPUT_SAVE_LOCATION>
 ```
 
-## 4. Setting Rules between Vertices and Edges !!
+## 5. Setting Rules between Vertices and Edges !!
 ```
 
     Tables and conventions from
@@ -70,7 +79,7 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
              (4) make triangles
 ```
 
-## 5. Results 
+## 6. Results 
 - Time consumption
    - Example PLY: `airplane.ply` (# of pointcloud: 445)
    <table>
@@ -124,7 +133,7 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
 - Marching cube results
 
 
-## 6. References
+## 7. References
 [1] [https://github.com/nihaljn/marching-cubes](https://github.com/nihaljn/marching-cubes) \
 [2] [https://www.volume-gfx.com/volume-rendering/marching-cubes/](https://www.volume-gfx.com/volume-rendering/marching-cubes/) \
 [3] [http://www.it.hiof.no/~borres/j3d/explain/marching/p-march.html](http://www.it.hiof.no/~borres/j3d/explain/marching/p-march.html) \

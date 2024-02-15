@@ -1,7 +1,12 @@
 # Marching Cubes
 ## [Goal] The implementation Marching Cubes using OpenCV in C++ 
-
-
+- Example pointcloud 
+   <table>
+      <tr>
+         <td><img src="./results/input/airplane1.png"/> </td>
+         <td><img src="./results/input/airplane2.png"/> </td>
+      </tr>
+   </table>
 
 ## 1. Prerequisites
 ### 1.1 Dependencies

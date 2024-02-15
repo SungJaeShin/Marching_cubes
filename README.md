@@ -109,29 +109,29 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
       <tr>
          <td> Pointcloud Gen time (ms) </td>
          <td> Killed </td>
-         <td> 2322.73 ms </td>
-         <td> 2213.96 ms </td>
-         <td> 2174.02 ms </td>
-         <td> 2208.76 ms </td>
-         <td> 2205.52 ms </td>
+         <td> 2322.73 </td>
+         <td> 2213.96 </td>
+         <td> 2174.02 </td>
+         <td> 2208.76 </td>
+         <td> 2205.52 </td>
       </tr>
       <tr>
          <td> Voxel calculation (ms) </td>
          <td> Killed </td>
-         <td> 0.053981 ms </td>
-         <td> 0.053611 ms </td>
-         <td> 0.053692 ms </td>
-         <td> 0.053516 ms </td>
-         <td> 0.053705 ms </td>
+         <td> 0.053981 </td>
+         <td> 0.053611 </td>
+         <td> 0.053692 </td>
+         <td> 0.053516 </td>
+         <td> 0.053705 </td>
       </tr>
       <tr>
          <td> Marching Cubes (ms) </td>
          <td> Killed </td>
-         <td> 889761 ms </td>
-         <td> 114597 ms </td>
-         <td> 14251.6 ms </td>
-         <td> 2846.31 ms </td>
-         <td> 155.389 ms </td>
+         <td> 889761 </td>
+         <td> 114597 </td>
+         <td> 14251.6 </td>
+         <td> 2846.31 </td>
+         <td> 155.389 </td>
       </tr>
    </table>
 

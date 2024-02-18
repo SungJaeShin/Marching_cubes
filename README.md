@@ -86,7 +86,7 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
 ```
 
 ## 6. Results 
-- Time consumption
+- Time consumption (assume: `isovalue 0.5`)
    - Example PLY: `airplane.txt` (# of pointcloud: 1335)
       <table>
          <tr>
@@ -140,7 +140,7 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
 
 
 
-- Time Consumption of Random Grid Generation results
+- Time Consumption of Random Grid Generation results (assume: `isovalue 0.5`)
    <table>
       <tr>
          <td> Density </td>
@@ -149,7 +149,7 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
          <td> -1 </td>
       </tr> 
       <tr>
-         <td> # of grids </td>
+         <td> # of voxel </td>
          <td> 125000 </td>
          <td> 125000 </td>
          <td> 125000 </td>

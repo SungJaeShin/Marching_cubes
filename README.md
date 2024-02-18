@@ -140,7 +140,7 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
 
 
 
-- Random Grid Generation results
+- Time Consumption of Random Grid Generation results
    <table>
       <tr>
          <td> Density </td>
@@ -158,36 +158,47 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
          <td> # of triangles </td>
          <td> 36064 </td>
          <td> 321827 </td>
-         <td> - </td>
+         <td> 17368 </td>
       </tr>
       <tr>
          <td> Pointcloud read time (ms) </td>
          <td> 11.6072 </td>
          <td> 11.9498 </td>
-         <td> - </td>
+         <td> 13.745 </td>
       </tr>
       <tr>
          <td> Voxel calculation (ms) </td>
          <td> 5.21115 </td>
          <td> 4.86867 </td>
-         <td> - </td>
+         <td> 6.08164 </td>
       </tr>
       <tr>
          <td> Marching Cubes (s) </td>
          <td> 667.486 </td>
          <td> 701.606 </td>
-         <td> - </td>
-      </tr>
-      <tr>
-         <td> Results </td>
-         <td> <img src="./results/random_grid_density_1.png"/> </td>
-         <td> <img src="./results/random_grid_density_random.png"/> </td>
-         <td> <img src="./results/random_grid_density_minus_1.png"/> </td>
+         <td> 732.627 </td>
       </tr>
    </table>
 
-
-
+- Marching cube results
+   <table>
+      <tr>
+         <td> Density </td>
+         <td> Results </td>
+      </tr> 
+      <tr>
+         <td> 1 </td>
+         <td> <img src="./results/random_grid_density_1.png"/> </td>
+      </tr> 
+      <tr>
+         <td> random </td>
+         <td> <img src="./results/random_grid_density_random.png"/> </td>
+      </tr>   
+      <tr>
+         <td> -1 </td>
+         <td> <img src="./results/random_grid_density_minus_1.png"/> </td>
+      </tr>
+   </table>
 
 
 ## 7. References

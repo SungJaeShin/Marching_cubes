@@ -36,10 +36,11 @@ Follow [OpenCV](https://docs.opencv.org/4.x/d2/de6/tutorial_py_setup_in_ubuntu.h
 (1) Loopup Table from [http://paulbourke.net/geometry/polygonise/](    http://paulbourke.net/geometry/polygonise/) \
 (2) save_ply.h from [https://github.com/nihaljn/marching-cubes/blob/main/src/utilities.cpp](https://github.com/nihaljn/marching-cubes/blob/main/src/utilities.cpp) \
 (3) Input file format &rarr; `.ply` & `.txt` \
-(4) Output file format &rarr; `.ply` & `.txt` \
-(5) Visualized pointcloud or mesh &rarr; `viz3DMesh()` & `viz3DPoints` in `viz_mesh.h` \
-(6) Visualization python code also provided in `example` folder &rarr; `viz_ply.py` \
-(7) Convert PLY format Binary to ASCII in `example` folder &rarr; `cvt_binary2ascii.py` 
+(4) If you don't have input files, then you can create random grid &rarr; `generate_random_grid()` in `utility.h` \
+(5) Output file format &rarr; `.ply` & `.txt` \
+(6) Visualized pointcloud or mesh &rarr; `viz3DMesh()` & `viz3DPoints()` in `viz_mesh.h` \
+(7) Visualization python code also provided in `example` folder &rarr; `viz_ply.py` \
+(8) Convert PLY format Binary to ASCII in `example` folder &rarr; `cvt_binary2ascii.py` 
 
 ## 4. Build and Run 
 Clone the repository and build and run simultaneously:
@@ -136,6 +137,57 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
       </table>
 
 - Marching cube results
+
+
+
+- Random Grid Generation results
+   <table>
+      <tr>
+         <td> Density </td>
+         <td> 1 </td>
+         <td> random </td>
+         <td> -1 </td>
+      </tr> 
+      <tr>
+         <td> # of grids </td>
+         <td> 125000 </td>
+         <td> 125000 </td>
+         <td> 125000 </td>
+      </tr> 
+      <tr>
+         <td> # of triangles </td>
+         <td> 36064 </td>
+         <td> 321827 </td>
+         <td> - </td>
+      </tr>
+      <tr>
+         <td> Pointcloud read time (ms) </td>
+         <td> 11.6072 </td>
+         <td> 11.9498 </td>
+         <td> - </td>
+      </tr>
+      <tr>
+         <td> Voxel calculation (ms) </td>
+         <td> 5.21115 </td>
+         <td> 4.86867 </td>
+         <td> - </td>
+      </tr>
+      <tr>
+         <td> Marching Cubes (s) </td>
+         <td> 667.486 </td>
+         <td> 701.606 </td>
+         <td> - </td>
+      </tr>
+      <tr>
+         <td> Results </td>
+         <td> <img src="./results/random_grid_density_1.png"/> </td>
+         <td> <img src="./results/random_grid_density_random.png"/> </td>
+         <td> <img src="./results/random_grid_density_minus_1.png"/> </td>
+      </tr>
+   </table>
+
+
+
 
 
 ## 7. References

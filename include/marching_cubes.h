@@ -33,7 +33,7 @@ void init_voxel_vertices(PointCloud pointcloud, Voxel &voxel,
         auto it = std::find(pointcloud.vertices.begin(), pointcloud.vertices.end(), vertex);
 
         if(it == pointcloud.vertices.end())
-            voxel.density.push_back(get_random_number());            
+            voxel.density.push_back(1);            
         else
         {
             int idx = it - pointcloud.vertices.begin();

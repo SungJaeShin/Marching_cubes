@@ -3,8 +3,8 @@
 - Example pointcloud 
    <table>
       <tr>
-         <td><img src="./results/input/airplane1.png"/> </td>
-         <td><img src="./results/input/airplane2.png"/> </td>
+         <td><img src="./results/input/sphere1.png"/> </td>
+         <td><img src="./results/input/sphere2.png"/> </td>
       </tr>
    </table>
 

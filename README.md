@@ -86,59 +86,52 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
 ```
 
 ## 6. Results 
-- Time consumption (assume: `isovalue 0.5`)
-   - Example PLY: `airplane.txt` (# of pointcloud: 1335)
+- Time consumption
+   - Example PLY: `sphere.txt` (# of pointcloud: 16926)
       <table>
          <tr>
             <td> NUM VOXEL </td>
-            <td> 400 </td>
-            <td> 200 </td>
-            <td> 100 </td>
-            <td> 50 </td>
-            <td> 30 </td>
-            <td> 10 </td>
+            <td> # of triangles </td>
+            <td> Pointcloud read time (ms) </td>
+            <td> Voxel calculation (ms) </td>
+            <td> Marching Cubes (ms) </td>
          </tr> 
          <tr>
-            <td> # of triangles </td>
-            <td> Killed </td>
-            <td> 19790413 </td>
-            <td> 2550114 </td>
-            <td> 334483 </td>
-            <td> 76775 </td>
-            <td> 4068 </td>
-         </tr>
-         <tr>
-            <td> Pointcloud read time (ms) </td>
-            <td> Killed </td>
-            <td> 2322.73 </td>
-            <td> 2213.96 </td>
-            <td> 2174.02 </td>
-            <td> 2208.76 </td>
-            <td> 2205.52 </td>
-         </tr>
-         <tr>
-            <td> Voxel calculation (ms) </td>
-            <td> Killed </td>
-            <td> 0.053981 </td>
-            <td> 0.053611 </td>
-            <td> 0.053692 </td>
-            <td> 0.053516 </td>
-            <td> 0.053705 </td>
-         </tr>
-         <tr>
-            <td> Marching Cubes (ms) </td>
-            <td> Killed </td>
-            <td> 889761 </td>
-            <td> 114597 </td>
-            <td> 14251.6 </td>
-            <td> 2846.31 </td>
-            <td> 155.389 </td>
+            <td> 200 </td>
+            <td> 68096 </td>
+            <td> 9.54439 ms </td>
+            <td> 0.684776 ms </td>
+            <td> 272528 ms </td>
          </tr>
       </table>
 
 - Marching cube results
-
-
+   <table>
+      <tr>
+         <td> ISOVALUE </td>
+         <td> -0.5 </td>
+      </tr> 
+      <tr>
+         <td> <img src="./results/sphere_density_minus_0.5.png"/> </td>
+         <td> <img src="./results/sphere_density_minus_0.5_2.png"/> </td>
+      </tr> 
+      <tr>
+         <td> ISOVALUE </td>
+         <td> 0.5 </td>
+      </tr> 
+      <tr>
+         <td> <img src="./results/sphere_density_0.5.png"/> </td>
+         <td> <img src="./results/sphere_density_0.5_2.png"/> </td>
+      </tr> 
+      <tr>
+         <td> ISOVALUE </td>
+         <td> 1 </td>
+      </tr> 
+      <tr>
+         <td> <img src="./results/sphere_density_1.png"/> </td>
+         <td> <img src="./results/sphere_density_1_2.png"/> </td>
+      </tr> 
+   </table>
 
 - Time Consumption of Random Grid Generation results (assume: `isovalue 0.5`)
    <table>
@@ -199,7 +192,6 @@ g++ ./src/main.cpp -L /usr/local/include/opencv2 -lopencv_viz -lopencv_highgui -
          <td> <img src="./results/random_grid_density_minus_1.png"/> </td>
       </tr>
    </table>
-
 
 ## 7. References
 [1] [https://github.com/nihaljn/marching-cubes](https://github.com/nihaljn/marching-cubes) \
